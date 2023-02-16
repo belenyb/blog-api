@@ -122,22 +122,23 @@ POST /api/upload-image/{id}
 #### 8. Obtener URL de imagen segun nombre de archivo
 
 ```http
-POST /api/search/{query}
+GET /api/image/{fileName}
 ```
 
-| Parameter | Type     | Description                                                       |
-| :-------- | :------- | :-----------------------------------------------------------------|
-| `query`   | `string `| **Required path param**. Nombre de la imagen. Ej: `article`      |
+| Parameter | Type     | Description                                                                                   |
+| :-------- | :------- | :---------------------------------------------------------------------------------------------|
+| `fileName`| `string `| **Required path param**. Nombre de la imagen. Ej: `article1676484089551articulo-2.jpeg`       |
 
-#### 9. Obtener URL de imagen segun nombre de archivo
+
+#### 9. Buscar articulo(s)
 
 ```http
-POST /api/image/{fileName}
+GET /api/search/{query}
 ```
 
 | Parameter | Type     | Description                                                       |
 | :-------- | :------- | :-----------------------------------------------------------------|
-| `fileName`| `string `| **Required path param**. Nombre de la imagen. Ej: `precio`      |
+| `query   `| `string `| **Required path param**. Nombre de la imagen. Ej: `precio`        |
 
 Ejemplo de respuesta con status `200`:
 ```
