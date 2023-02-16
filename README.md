@@ -35,13 +35,13 @@ POST /api/create
 ```
 - Parameter: body
 - Type: string
-- Description:
+- Description: 
   ```
   {
-    "title": "Nuevo articulo",
+    "title": "Nuevo articulo",                
     "content": "Contenido del nuevo articulo",
-    "date": 1676489054593,
-    "image": "default-image.png"
+    "date": 1676489054593,                    
+    "image": "default-image.png"              
   }
   ```
 
