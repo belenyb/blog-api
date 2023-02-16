@@ -1,0 +1,25 @@
+{
+  "name": "api-rest-node",
+  "version": "1.0.0",
+  "description": "API Rest con Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "swagger-autogen": "node swagger.js"
+  },
+  "author": "Belen Yarde Buller",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "multer": "^1.4.5-lts.1",
+    "validator": "^13.9.0",
+    "swagger-autogen": "^2.23.1",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

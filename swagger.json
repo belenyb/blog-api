@@ -1,0 +1,267 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Blog API",
+    "description": "Blog API documentation"
+  },
+  "host": "localhost:3900",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "Article",
+      "description": "Article endpoints"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/create": {
+      "post": {
+        "tags": [
+          "Article"
+        ],
+        "description": "Crear nuevo articulo",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Article"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/articles": {
+      "get": {
+        "tags": [
+          "Article"
+        ],
+        "description": "Listar todos los articulos",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/articles/latest": {
+      "get": {
+        "tags": [
+          "Article"
+        ],
+        "description": "Listar ultimos n articulos.",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limite de articulos a listar. Valor por defecto: 5",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/article/{id}": {
+      "get": {
+        "tags": [
+          "Article"
+        ],
+        "description": "Listar un articulo",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Article"
+        ],
+        "description": "Eliminar un articulo por id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Article"
+        ],
+        "description": "Editar un articulo por id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/upload-image/{id}": {
+      "post": {
+        "tags": [
+          "Article"
+        ],
+        "description": "Subir imagen a un articulo por id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/image/{fileName}": {
+      "get": {
+        "tags": [
+          "Article"
+        ],
+        "description": "Traer URL de   segun nombre de archivo",
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/search/{query}": {
+      "get": {
+        "tags": [
+          "Article"
+        ],
+        "description": "Buscar articulo(s)",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Article": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "example": "Nuevo articulo"
+        },
+        "content": {
+          "type": "string",
+          "example": "Contenido del nuevo articulo"
+        },
+        "date": {
+          "type": "number",
+          "example": 1676489054593
+        },
+        "image": {
+          "type": "string",
+          "example": "default-image.png"
+        }
+      }
+    }
+  }
+}
