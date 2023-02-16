@@ -1,5 +1,5 @@
 # Blog API
-API Rest con Nodejs para Blog
+API Rest con Node.js para Blog
 
 ## Tecnologias
 - Node
