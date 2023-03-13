@@ -9,7 +9,7 @@ connection();
 
 // Crear servidor Node
 const app = express();
-const port = 3900;
+const port = process.env.PORT || 3001;
 
 // Configurar CORS
 app.use(cors()); // Los middlewares se ejecutan antes que otras funciones. En este caso, el middleware cors se ejecuta antes de las rutas, evitando errores de cors

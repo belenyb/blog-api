@@ -1,0 +1,7 @@
+Para arrancar proyecto
+backend npm start
+frontend cd client npm start
+
+iconos https://heroicons.com/
+docu https://tailwindcss.com/docs/installation 
+componentes https://tailwindui.com/components

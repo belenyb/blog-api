@@ -5,7 +5,7 @@
     "title": "Blog API",
     "description": "Blog API documentation"
   },
-  "host": "localhost:3900",
+  "host": "localhost:3001",
   "basePath": "/api",
   "tags": [
     {
