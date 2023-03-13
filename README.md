@@ -23,7 +23,7 @@ API Rest con Node.js para Blog
 | `500`     | INTERNAL SERVER ERROR      |
 
 ### Swagger
-Documentacion y testeo de servicios web RESTful alojado en `localhost:3900/docs` creado con Swagger Autogen y Swagger UI Express. Se genera automaticamente al inicializarse la aplicacion.
+Documentacion y testeo de servicios web RESTful alojado en `localhost:3001/docs` creado con Swagger Autogen y Swagger UI Express. Se genera automaticamente al inicializarse la aplicacion.
 
 ![Swagger Screenshot](./images/swagger-screenshots/swagger.png?raw=true "Swagger")
 
@@ -36,13 +36,13 @@ POST /api/create
 ```
 - Parameter: body
 - Type: string
-- Description: 
+- Description:
   ```
   {
-    "title": "Nuevo articulo",                
+    "title": "Nuevo articulo",
     "content": "Contenido del nuevo articulo",
-    "date": 1676489054593,                    
-    "image": "default-image.png"              
+    "date": 1676489054593,
+    "image": "default-image.png"
   }
   ```
 
