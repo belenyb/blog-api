@@ -1,5 +1,5 @@
 # Blog API
-API Rest con Nodejs para Blog
+API Rest con Node.js para Blog
 
 ## Tecnologias
 - Node
@@ -23,7 +23,8 @@ API Rest con Nodejs para Blog
 | `500`     | INTERNAL SERVER ERROR      |
 
 ### Swagger
-Documentacion y testeo de servicios web RESTful alojado en `localhost:3900/docs` creado con Swagger Autogen y Swagger UI Express. Se genera automaticamente al iniciarlizarse la aplicacion.
+Documentacion y testeo de servicios web RESTful alojado en `localhost:3900/docs` creado con Swagger Autogen y Swagger UI Express. Se genera automaticamente al inicializarse la aplicacion.
+
 ![Swagger Screenshot](./images/swagger-screenshots/swagger.png?raw=true "Swagger")
 
 ### Endpoints
@@ -121,22 +122,23 @@ POST /api/upload-image/{id}
 #### 8. Obtener URL de imagen segun nombre de archivo
 
 ```http
-POST /api/search/{query}
+GET /api/image/{fileName}
 ```
 
-| Parameter | Type     | Description                                                       |
-| :-------- | :------- | :-----------------------------------------------------------------|
-| `query`   | `string `| **Required path param**. Nombre de la imagen. Ej: `article`      |
+| Parameter | Type     | Description                                                                                   |
+| :-------- | :------- | :---------------------------------------------------------------------------------------------|
+| `fileName`| `string `| **Required path param**. Nombre de la imagen. Ej: `article1676484089551articulo-2.jpeg`       |
 
-#### 9. Obtener URL de imagen segun nombre de archivo
+
+#### 9. Buscar articulo(s)
 
 ```http
-POST /api/image/{fileName}
+GET /api/search/{query}
 ```
 
 | Parameter | Type     | Description                                                       |
 | :-------- | :------- | :-----------------------------------------------------------------|
-| `fileName`| `string `| **Required path param**. Nombre de la imagen. Ej: `precio`      |
+| `query   `| `string `| **Required path param**. Nombre de la imagen. Ej: `precio`        |
 
 Ejemplo de respuesta con status `200`:
 ```
