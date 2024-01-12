@@ -1,6 +1,8 @@
 # Blog API
 API Rest con Node.js para Blog
 
+<img src="blogapi-cover.png" width=400 height=auto alt="Login screen" />
+
 ## Tecnologias
 - Node
 - Express
